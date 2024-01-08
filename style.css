@@ -1,0 +1,160 @@
+@import
+  url(https://fonts.googleapis.com/css?family=VT323);
+:root {
+  --star-color-A: white;
+  --star-color-B: transparent;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: "VT323";
+  font-size: 2rem;
+  background: linear-gradient(
+    0deg,
+    rgb(25,25,112),
+    rgb(33,20,0) 30%);
+    rgb(0, 0, 0) 80%;
+    color:aliceblue;
+}
+
+.lable {
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+
+.slider {
+  display: block;
+}
+
+.circle {
+    z-index:10;
+  position: absolute;
+  /*width: 10px;
+  height: 10px;
+  left: 100px;
+  top: 20px; */
+  background-color: var(--star-color-A);
+  border-radius: 50%;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /*animation-direction: alternate;*/
+}
+
+.blink_1 {
+  animation-name: blink10;
+}
+
+.blink_2 {
+  animation-name: blink20;
+}
+
+.blink_3 {
+  animation-name: blink30;
+}
+
+.blink_4 {
+  animation-name: blink40;
+}
+
+.blink_5 {
+  animation-name: blink50;
+}
+
+@keyframes blink10 {
+  0%, 100% {
+    background-color: var(--star-color-A);
+  }
+  20% {
+    background-color: var(--star-color-B);
+  }
+}
+
+@keyframes blink20 {
+  0%, 100% {
+    background-color: var(--star-color-B);
+  }
+  40% {
+    background-color: var(--star-color-A);
+  }
+}
+
+@keyframes blink50 {
+  0%, 100% {
+    background-color: var(--star-color-A);
+  }
+  50% {
+    background-color: var(--star-color-B);
+  }
+}
+
+@keyframes blink30 {
+  0%, 100% {
+    background-color: var(--star-color-A);
+  }
+  60% {
+    background-color: var(--star-color-B);
+  }
+}
+
+@keyframes blink40 {
+  0%, 100% {
+    background-color: var(--star-color-B);
+  }
+  80% {
+    background-color: var(--star-color-A);
+  }
+}
+
+.footer{
+    position:fixed;
+    bottom:0;
+    text-align: center;
+    width:100%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:blueviolet;
+    color:white;
+}
+
+
+#p1{
+    font-family: 'Are You Serious', cursive;
+font-family: 'Orbitron', sans-serif;
+font-weight: bolder;
+color:aliceblue;
+}
+
+#result_label, #confidence_label{
+    font-family: 'Poiret One', sans-serif;
+    color:aliceblue;
+}
+
+.b1{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#planet1{
+    position: fixed;
+    right: 100;
+    top: 100;
+    animation: r1 10s infinite linear;
+}
+
+#planet2{
+    position: fixed;
+    left: 50;
+    bottom: 75;
+    animation: r1 10s infinite linear;
+}
+
+@keyframes r1{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+

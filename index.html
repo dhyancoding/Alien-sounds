@@ -1,0 +1,63 @@
+
+<html>
+  <head>
+    <title>Sound Identification Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Are+You+Serious&family=Orbitron&family=Roboto+Slab&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Are+You+Serious&family=Orbitron&family=Poiret+One&family=Roboto+Slab&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    
+    <lable class=lable for="slider1">STARS
+      <input class="slider" name="slider1" type=range min="10" max="1000" value="20"></input>
+      <div class="value"></div>
+    </lable>
+  <lable class=lable for="slider2">SIZE
+      <input class="slider" name="slider2" type=range min="1" max="50" value="5"></input>
+      <div class="value"></div>
+    </lable>
+    <div class="sky"></div>
+    
+    <div>
+      <img src="planet-4912389-4088993.webp" height="200" width="200" id="planet1">
+    </div>
+
+    <div class="col-xs-12 header_div text-center">
+      <h1>Alien Sounds</h1>
+        <p id="p1">Play the 4 sounds you see on top of each alien and that Alien will dance!</p>
+    </div>
+    
+    <div>
+      <img src="planet-4912389-4088993.webp" height="200" width="200" id="planet1">
+    </div>
+
+    <div class="main_div">
+      <center>
+        <br>
+        <button class="btn btn-success b1" onclick="Start_Classification()">START</button>
+        <h3 id="result_label">I can hear: </h3>
+        <h3 id="confidence_label">Accuracy: </h3>
+        <br>
+        <img src="aliens-01.png" id="a1" width="300" height="300" style="z-index: 10000;">
+        <img src="aliens-02.png" id="a2" width="300" height="300" style="z-index: 10000;">
+        <img src="aliens-03.png" id="a3" width="300" height="300" style="z-index: 10000;">
+        <img src="aliens-04.png" id="a4" width="300" height="300" style="z-index: 10000;">
+      </center>
+    </div>
+    
+    <div>
+      <img src="cartoon-planet-icon-png.png" height="200" width="200" id="planet2">
+    </div>
+
+    <div class="footer">
+      Created by- Dhyan Patel
+    </div>
+<script src="main.js"></script>
+  </body>
+</html>
